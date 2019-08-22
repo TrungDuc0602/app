@@ -4,7 +4,9 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @types = Type.all
+    type ||= params[:type]
+    @products = type.nil? ? Product.all : Product.where(type_id: type)
   end
 
   # GET /products/1

@@ -9,6 +9,7 @@
             <div class="entry">
                 <%= image_tag(product.image_url, :size => "260x180") %>
                 <h3><%= product.name %></h3> 
+                <h3><%= product.type_id %></h3> 
                 <%= sanitize(product.description) %>
                 <div class="price_line">
                     <span class="price"><%= product.price %></span>

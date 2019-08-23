@@ -3,7 +3,7 @@
   <head>
     <title>hí hí</title>
     <%= stylesheet_link_tag "scaffolds" %>
-    <%= stylesheet_link_tag "depot" %>
+    <%= stylesheet_link_tag "foodapp" %>
   </head>
 
     <body id="store">
@@ -12,19 +12,15 @@
         </div>
 
         <div id="columns">
-            <div id="side">
+            <div id="side">            
                 <% if @cart %>
                     <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
                         <%= render @cart %>
                     <% end %>
                 <% end %>
-                
-                <% @types.each do |type| %>
-                    <div class="entry">
-                        <%= link_to type.type_food, products_path(type: type.id) %>
-                    </div>
-                <% end %>
             </div>
+
+            <%# @types.each do |type|.... %>
         </div>
 
         <div id="main">

@@ -1,20 +1,16 @@
-<% if notice %>
-   <p id="notice"><%= notice %></p>
-<% end %>
- 
 <!DOCTYPE html>
 <html>
     <title>Food store</title>
-        <% @products.each do |product| %>
-            <div class="entry">
-                <%= image_tag(product.image_url, :size => "260x180") %>
-                <h3><%= product.name %></h3> 
-                <h3><%= product.type_id %></h3> 
-                <%= sanitize(product.description) %>
-                <div class="price_line">
-                    <span class="price"><%= product.price %></span>
-                </div>
-            </div>
-        <% end %>
-    </body>
+    <% @products.each do |product| %>
+        <div class="entry">
+          <div class = "images">
+            <%= image_tag(product.image_url, :size => "240x220") %>      
+          </div>
+
+          <div class="price_line">
+            <h3><%= product.name %></h3> 
+              <span class="price"><%= product.price %></span>
+          </div>
+        </div>
+    <% end %>
 </html>

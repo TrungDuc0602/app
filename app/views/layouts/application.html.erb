@@ -7,20 +7,28 @@
   </head>
 
     <body id="store">
-        <div id="banner">
-            <%= @page_title || "menu" %>
-        </div>
+    <ul>
+        <li><a class="active" href="http://localhost:3000/"><strong>Trang chủ</a></li>
+        <li><a href="http://localhost:3000/store/index">Thực đơn</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+    </ul>
 
         <div id="columns">
             <div id="side">            
                 <% if @cart %>
-                    <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
-                        <%= render @cart %>
+                    <%= hidden_field(@cart.line_items.empty?, :id => "cart") do %>
+                    <%= render @cart %>
                     <% end %>
                 <% end %>
+            
+            <% if @types != nil %>
+                <% @types.each do |type| %>
+                    <div class="hoho">
+                        <%= link_to type.type_food, store_index_url(type: type.id) %>
+                    </div>
+                <% end %>
+            <% end %>    
             </div>
-
-            <%# @types.each do |type|.... %>
         </div>
 
         <div id="main">

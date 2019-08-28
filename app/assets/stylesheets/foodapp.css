@@ -1,13 +1,3 @@
-/* Global styles */
-/* #store #notice {
-        color: #000;
-        border: 2px solid red;
-        padding: 1em;
-        margin-bottom: 2em;
-        background-color: #f0f0f0;
-        font: bold smaller sans-serif;
-} */
-
 #store h1 {
         font:  150% sans-serif;
         color: #226;
@@ -128,13 +118,18 @@ border-bottom: 1px dotted #77d;
 /* Styles for main page */
 #banner {
   background: rgb(223, 100, 100);
-  padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Arial", serif;
   color: rgb(252, 250, 250);
   text-align: center;
 }
+
+#store .banner {
+  display: inline;
+  background: #141;
+}
+
   #banner img {
   float: left;
 }
@@ -217,4 +212,37 @@ border-bottom: 1px dotted #77d;
   }
   .depot_form div {
     margin: 0.5em 0;
+  }
+
+
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1022a;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #890000;
+  }
+  
+  .active {
+    background-color: #890000;
   }

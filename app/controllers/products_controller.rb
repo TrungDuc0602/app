@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
   def index
     @types = Type.all
     type ||= params[:type]
-    @products = type.nil? ? Product.all : Product.where(type_id: type)
+    # @products = type.nil? ? Product.where(type_id: = 1 ) : Product.where(type_id: type)
+     @products = type.nil? ? Product.all : Product.where(type_id: type)
   end
 
   # GET /products/1

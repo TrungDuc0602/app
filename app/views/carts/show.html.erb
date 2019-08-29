@@ -1,11 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <h2>Your Pragmatic Cart</h2>
-<ul>
+<head>
+<style>
+li {
+  display: block;
+}
+</style>
+</head>
+<div>
     <% @cart.line_items.each do |item| %>
-        <li><%= item.product.title %></li>
-    <% end %>
-</ul>
+        <div class="entry">
+          <div class = "images">
+            <%= image_tag(item.product.image_url, :size => "10x100") %>      
+          </div>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+          <div class="price_line">
+            <h3><%= item.quantity %></h3> phần <h3><%= item.product.name %></h3> 
+            <span class="price"><%= item.product.price %></span>
+          </div>
+        </div>
+    <% end %>
+</div>

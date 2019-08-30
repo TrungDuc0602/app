@@ -1,0 +1,2 @@
+class LinePro < ApplicationRecord
+end

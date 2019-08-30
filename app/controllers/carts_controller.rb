@@ -4,7 +4,10 @@ class CartsController < ApplicationController
   # GET /carts
   # GET /carts.json
   def index
-    @carts = Cart.all
+    @carts = []
+        if session[:cart_id] != nil
+            @carts << Cart.find_by_id(session[:cart_id])
+        end
   end
 
   # GET /carts/1

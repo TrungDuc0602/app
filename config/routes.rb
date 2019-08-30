@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_products
+  resources :line_pros
   get 'home/index'
   resources :line_items
   resources :carts

@@ -187,16 +187,16 @@ border-bottom: 1px dotted #77d;
   }
 
   /* Styles for order form */
-  .depot_form fieldset {
+  .foodapp_form fieldset {
     background: #efe;
   }
-  .depot_form legend {
+  .foodapp_form legend {
     color: #dfd;
     background: #141;
     font-family: sans-serif;
     padding: 0.2em 1em;
   }
-  .depot_form label {
+  .foodapp_form label {
     width: 5em;
     float: left;
     text-align: right;
@@ -204,13 +204,13 @@ border-bottom: 1px dotted #77d;
     margin-right: 0.1em;
     display: block;
   }
-  .depot_form select, .depot_form textarea, .depot_form input {
+  .foodapp_form select, .foodapp_form textarea, .foodapp_form input {
     margin-left: 0.5em;
   }
-  .depot_form .submit {
+  .foodapp_form .submit {
     margin-left: 4em;
   }
-  .depot_form div {
+  .foodapp_form div {
     margin: 0.5em 0;
   }
 

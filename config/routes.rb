@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   resources :line_products
   resources :line_pros
   get 'home/index'

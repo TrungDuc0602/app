@@ -9,6 +9,9 @@ li {
 <div>
     <% @cart.line_items.each do |item| %>
         <div class="entry">
+          <span style="margin-left:280px">
+            <%= button_to "x", item, :method => :delete %>
+          </span>
           <div class = "images">
             <%= image_tag(item.product.image_url, :size => "10x100") %>      
           </div>

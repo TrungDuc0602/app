@@ -4,16 +4,33 @@
     <title>hí hí</title>
     <%= stylesheet_link_tag "scaffolds" %>
     <%= stylesheet_link_tag "foodapp" %>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
 
     <body id="store">
-    <ul>
-        <li><a class="active" href="http://localhost:3000/"><strong>Trang chủ</a></li>
+
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >BestFood</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:3000/">Trang chủ</a></li>
+        <li><a href="http://localhost:3000/detail/index">Giới thiệu</a></li>
         <li><a href="http://localhost:3000/store/index">Thực đơn</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-        
-        <li><a href="http://localhost:3000/carts">Giỏ hàng</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="http://localhost:3000/contact/index">Liên hệ</a></li>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://localhost:3000/carts "><span class="glyphicon glyphicon-user"></span> Giỏi hàng</a></li>
+    </ul>
+  </div>
+</nav>
+
 
         <div id="columns">
             <div id="side">            

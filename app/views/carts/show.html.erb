@@ -471,15 +471,13 @@ jQuery(document).ready(function() {
 
                                     <div class="col-md-4 col-sm-4 col-xs-4 sl">
                                        <div class="quantity-wap quantity-cart">
-                                        <input type="text" class="quantity" value="1">
-                                        <input type="hidden" class="price_input" value=<%= item.product.price.to_i %>>
-                                        <input type="hidden" class="total_price" value="594000">
-                                        <a class="btn inc button">+</a><a class="btn dec button">−</a></div>
-                                    </div>
+											<input type="text" class="quantity" id="quantity_product" onkeyup="myFunction(<%= item.product.price.to_i %>)" value="1">
+											<a class="btn inc button">+</a><a class="btn dec button">−</a></div>
+                                    	</div>
                                     
-                                    <div class="col-md-4 col-sm-4 col-xs-4 tt">
-                                       <div class="price" id="after_price_combo_121_1">594.<small>000</small><small>VNĐ</small></div>
-                                    </div>
+										<div class="col-md-4 col-sm-4 col-xs-4 tt">
+										<div class="price" id="after_price_combo_121_1"><span id="demo"></span><small>VNĐ</small></div>
+										</div>
                                  </div>
                               </div>
                            </div>
@@ -521,7 +519,7 @@ jQuery(document).ready(function() {
                                  </div>
                               </div>
                               <!--div class="clearfix b-mobile b-left"><label class="nhan text-uppercase">TỔNG THANH TOÁN</label></div><div class="price b-mobile b-right clearfix"><div id="cart_total_price">464.<small>000</small><small>VNĐ</small></div></div-->
-                              <div class="clearfix b-btn-mobile"><a href="javascript:void(0);" onclick="product.place_order();" class="btn btn-danger btn-lg btn-dk">đặt hàng</a></div>
+                              <div class="clearfix b-btn-mobile"><a href="http://localhost:3000/orders/new?" class="btn btn-danger btn-lg btn-dk">đặt hàng</a></div>
                            </div>
                         </div>
                      </div>
@@ -548,5 +546,11 @@ jQuery(document).ready(function() {
    </div>
 </div>
 
-<%= button_to 'Checkout', new_order_path, :method => :get %>
+<script>
+function myFunction(a) {
+  var x = document.getElementById("quantity_product").value * a;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
 </body></html>

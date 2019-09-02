@@ -15,14 +15,17 @@
         <%= form.label :name %><br>
         <%= form.text_field :name, :size => 40 %>
     </div>
+
     <div class="field">
         <%= form.label :address %><br>
         <%= form.text_area :address, :rows => 3, :cols => 40 %>
     </div>
+
     <div class="field">
         <%= form.label :email %><br>
         <%= form.text_field :email, :size => 40 %>
     </div>
+    
     <div class="field">
         <%= form.label :pay_type %><br>
         <%= form.select :pay_type, Order::PAYMENT_TYPES, :prompt => 'Select a payment method' %>
